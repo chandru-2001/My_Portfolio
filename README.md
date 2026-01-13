@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+🌟 S P Chandrakant Prabhu - Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to my personal portfolio! This is a React + Tailwind CSS web application showcasing my skills, projects, experience, and contact information in a modern, interactive, and responsive design.
 
-## Available Scripts
 
-In the project directory, you can run:
+🛠️ Technologies Used
 
-### `npm start`
+Frontend: React, Tailwind CSS, Lucide Icons
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Animations: Custom Tailwind CSS keyframes & gradients
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+State Management: React useState & useEffect
 
-### `npm test`
+Deployment Ready: Production build with npm run build
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Version Control: Git & GitHub
 
-### `npm run build`
+🖥️ Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Home Page:
+Animated gradient blobs, hero section with introduction, call-to-action buttons.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+About Me:
+Personal summary, contact info, and education timeline.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Experience:
+Internship experience at TCS with real-time web game development.
 
-### `npm run eject`
+Projects:
+Interactive showcase of projects with tech stack and highlights.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Skills & Certifications:
+Programming languages, frameworks, databases, tools, certifications, and achievements.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Contact Page:
+Email, phone, LinkedIn, and location with interactive buttons.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Responsive Design:
+Fully responsive on mobile, tablet, and desktop with a modern aesthetic.
