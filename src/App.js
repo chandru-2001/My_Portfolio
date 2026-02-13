@@ -160,7 +160,7 @@ const HomePage = () => {
             S P Chandrakant Prabhu
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8">
-            Flutter Developer | Web Developer | Full Stack Engineer | TCS Intern
+            React Native Developer | Flutter Developer | Web Developer | Full Stack Engineer | TCS Intern
           </p>
           <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
             MCA student specializing in Flutter app development, web technologies, and creating scalable, user-centric software solutions
