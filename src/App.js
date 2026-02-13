@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Phone, Linkedin, MapPin, Award, Briefcase, GraduationCap, Code, Menu, X, Home, User, Folder, Trophy, MessageSquare } from 'lucide-react';
+import { Mail, Phone, Linkedin, MapPin, Award, Briefcase, GraduationCap, Code, Menu, X, Home, User, Folder, MessageSquare } from 'lucide-react';
 import TCS from './assets/TCS.png';
 
 // Router simulation using hash navigation
