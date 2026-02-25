@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Phone, Linkedin, MapPin, Award, Briefcase, GraduationCap, Code, Menu, X, Home, User, Folder, MessageSquare } from 'lucide-react';
+import { Mail, Phone, Linkedin, MapPin, Award, Briefcase, GraduationCap, Code, Menu, X, Home, User, Folder, MessageSquare, Sparkles, ChevronRight, Trophy, Target, Gamepad2 } from 'lucide-react';
 import TCS from './assets/TCS.png';
 
 // Router simulation using hash navigation
@@ -38,6 +38,22 @@ const Link = ({ to, children, className, onClick }) => {
     </a>
   );
 };
+
+const SectionTitle = ({ title, subtitle }) => (
+  <div className="mb-12 text-center">
+    <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-300 via-pink-300 to-purple-300 bg-clip-text text-transparent">
+      {title}
+    </h1>
+    {subtitle && <p className="text-gray-400 mt-4 max-w-2xl mx-auto">{subtitle}</p>}
+  </div>
+);
+
+const HeroStat = ({ value, label }) => (
+  <div className="bg-slate-800/50 border border-purple-500/20 backdrop-blur-sm rounded-xl px-5 py-4 min-w-[150px]">
+    <p className="text-2xl font-bold text-white">{value}</p>
+    <p className="text-sm text-gray-400">{label}</p>
+  </div>
+);
 
 // Animated Background Component
 const AnimatedBackground = () => {
@@ -153,32 +169,42 @@ const Navigation = () => {
 // Home Page
 const HomePage = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 pt-16">
-      <div className="max-w-4xl mx-auto text-center">
-        <div className="animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-purple-400 bg-clip-text text-transparent animate-shimmer">
-            S P Chandrakant Prabhu
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8">
-            React Native Developer | Flutter Developer | Web Developer | Full Stack Engineer | TCS Intern
-          </p>
-          <p className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
-            MCA student specializing in Flutter app development, web technologies, and creating scalable, user-centric software solutions
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              to="/contact"
-              className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105 inline-block"
-            >
-              Get In Touch
-            </Link>
-            <Link
-              to="/projects"
-              className="px-8 py-3 border-2 border-purple-500 rounded-full hover:bg-purple-500/20 transition-all duration-300 inline-block"
-            >
-              View Projects
-            </Link>
-          </div>
+    <div className="min-h-screen flex items-center justify-center px-4 pt-24">
+      <div className="max-w-6xl mx-auto text-center animate-fade-in">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-purple-400/30 bg-purple-500/10 text-purple-200 text-sm mb-6">
+          <Sparkles size={16} />
+          Mobile + Full Stack Developer
+        </div>
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-300 via-pink-300 to-purple-300 bg-clip-text text-transparent animate-shimmer bg-[length:200%_200%]">
+          S P Chandrakant Prabhu
+        </h1>
+        <p className="text-lg md:text-2xl text-gray-300 mb-6 max-w-4xl mx-auto">
+          React Native Developer | Flutter Developer | Web Developer | Full Stack Engineer
+        </p>
+        <p className="text-base md:text-lg text-gray-400 mb-10 max-w-3xl mx-auto">
+          Building reliable, user-focused digital products with strong frontend craft and scalable backend systems.
+        </p>
+
+        <div className="flex flex-wrap justify-center gap-4 mb-10">
+          <Link
+            to="/projects"
+            className="px-8 py-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full hover:shadow-lg hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
+          >
+            View Projects
+            <ChevronRight size={18} />
+          </Link>
+          <Link
+            to="/contact"
+            className="px-8 py-3 border-2 border-purple-500 rounded-full hover:bg-purple-500/20 transition-all duration-300 inline-block"
+          >
+            Get In Touch
+          </Link>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-4">
+          <HeroStat value="10+" label="Projects Built" />
+          <HeroStat value="4+" label="Core Stacks" />
+          <HeroStat value="2025" label="TCS Internship" />
         </div>
       </div>
     </div>
@@ -205,9 +231,10 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen py-20 px-4 pt-24">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-5xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-          About Me
-        </h1>
+        <SectionTitle
+          title="About Me"
+          subtitle="MCA graduate focused on building polished mobile apps and scalable web experiences."
+        />
         
         <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20 mb-8">
           <p className="text-lg text-gray-300 mb-6 leading-relaxed">
@@ -285,9 +312,10 @@ const ExperiencePage = () => {
   return (
     <div className="min-h-screen py-20 px-4 pt-24">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-5xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-          Work Experience
-        </h1>
+        <SectionTitle
+          title="Work Experience"
+          subtitle="Hands-on delivery experience building interactive products with modern frontend tools."
+        />
         
         <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20">
           <div className="flex items-start space-x-4 mb-6">
@@ -307,7 +335,7 @@ const ExperiencePage = () => {
             <ul className="space-y-4">
               {experience.responsibilities.map((resp, index) => (
                 <li key={index} className="flex items-start space-x-3 bg-slate-700/30 p-4 rounded-lg">
-                  <span className="text-purple-400 mt-1 text-xl">•</span>
+                  <span className="text-purple-400 mt-1 text-xl">*</span>
                   <span className="text-gray-300 text-lg">{resp}</span>
                 </li>
               ))}
@@ -337,6 +365,13 @@ const ProjectsPage = () => {
       description: 'Web-based therapeutic game to improve motor coordination and postural control with real-time motion sensor integration.',
       tech: ['React', 'React Three Fiber', 'TypeScript', 'Zustand', 'WebSocket', 'Tailwind CSS'],
       highlights: ['Real-time sensor data integration', 'Progressive difficulty levels', '3D interactive interfaces', 'Therapeutic performance metrics']
+    },
+    {
+      title: 'FreshCart: Full-Stack Grocery Delivery App',
+      featured: true,
+      description: 'Production-ready mobile grocery delivery app built with React Native, Expo Router, TypeScript, and Firebase (Auth + Firestore), covering complete user journeys from onboarding to post-purchase order tracking.',
+      tech: ['React Native', 'Expo Router', 'TypeScript', 'Firebase Auth', 'Cloud Firestore', 'FCM'],
+      highlights: ['Email authentication and secure account flow', 'Category-based product discovery with search + filtering', 'Cart management with smooth quantity and pricing updates', 'Multi-mode checkout: Card, UPI, and Cash on Delivery (COD)', 'Saved delivery addresses for faster repeat orders', 'Per-user order history with detailed order views', 'Offline-aware routing and network guards for resilience', 'Mock-data fallback support for uninterrupted UX', 'Push notification integration through Firebase Cloud Messaging (FCM)']
     },
     {
       title: 'GrocEasy: Smart Grocery Shopping App',
@@ -380,29 +415,45 @@ const ProjectsPage = () => {
 
   ];
 
+  const orderedProjects = [...projects].sort(
+    (a, b) => Number(Boolean(b.featured)) - Number(Boolean(a.featured))
+  );
+
   return (
     <div className="min-h-screen py-20 px-4 pt-24">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-5xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-          Featured Projects
-        </h1>
+        <SectionTitle
+          title="Featured Projects"
+          subtitle="Selected work showcasing full-stack delivery, mobile engineering, and production-focused thinking."
+        />
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+          {orderedProjects.map((project, index) => (
             <div
               key={index}
-              className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-purple-500/20 hover:border-purple-500/40 hover:transform hover:scale-105 transition-all duration-300"
+              className={`bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border transition-all duration-300 hover:transform hover:scale-105 ${
+                project.featured
+                  ? 'lg:col-span-2 border-pink-400/40 shadow-lg shadow-pink-500/20 bg-gradient-to-br from-pink-500/10 via-purple-500/10 to-slate-800/60'
+                  : 'border-purple-500/20 hover:border-purple-500/40'
+              }`}
             >
-              <div className="h-2 w-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4"></div>
-              <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
-              <p className="text-gray-300 mb-4">{project.description}</p>
+              <div className="flex items-center justify-between mb-4">
+                <div className="h-2 w-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
+                {project.featured && (
+                  <span className="text-xs font-semibold px-3 py-1 rounded-full bg-pink-500/20 text-pink-300 border border-pink-400/30">
+                    Featured Project
+                  </span>
+                )}
+              </div>
+              <h3 className={`${project.featured ? 'text-3xl' : 'text-2xl'} font-bold mb-3`}>{project.title}</h3>
+              <p className={`${project.featured ? 'text-gray-200' : 'text-gray-300'} mb-4`}>{project.description}</p>
               
               <div className="mb-4">
                 <h4 className="text-sm font-semibold text-purple-400 mb-2">Key Features:</h4>
-                <ul className="space-y-2">
+                <ul className="space-y-2 max-h-56 overflow-y-auto pr-1">
                   {project.highlights.map((highlight, i) => (
                     <li key={i} className="text-sm text-gray-400 flex items-start space-x-2">
-                      <span className="text-purple-400">✓</span>
+                      <span className="text-purple-400">&gt;</span>
                       <span>{highlight}</span>
                     </li>
                   ))}
@@ -446,9 +497,10 @@ const SkillsPage = () => {
   return (
     <div className="min-h-screen py-20 px-4 pt-24">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-5xl font-bold mb-12 text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-          Skills & Technologies
-        </h1>
+        <SectionTitle
+          title="Skills & Technologies"
+          subtitle="Core tools I use to ship reliable apps across mobile, web, and backend workflows."
+        />
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {Object.entries(skills).map(([category, items], index) => (
@@ -497,17 +549,17 @@ const SkillsPage = () => {
         <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center p-6 bg-slate-700/30 rounded-xl hover:transform hover:scale-105 transition-all duration-300">
-              <div className="text-5xl mb-4">🏆</div>
+              <Trophy className="text-purple-300 mx-auto mb-4" size={40} />
               <p className="font-bold text-xl mb-2">District Champion</p>
               <p className="text-gray-400">Roller Skating</p>
             </div>
             <div className="text-center p-6 bg-slate-700/30 rounded-xl hover:transform hover:scale-105 transition-all duration-300">
-              <div className="text-5xl mb-4">🎯</div>
+              <Target className="text-purple-300 mx-auto mb-4" size={40} />
               <p className="font-bold text-xl mb-2">Tour Coordinator</p>
               <p className="text-gray-400">College Events</p>
             </div>
             <div className="text-center p-6 bg-slate-700/30 rounded-xl hover:transform hover:scale-105 transition-all duration-300">
-              <div className="text-5xl mb-4">🎮</div>
+              <Gamepad2 className="text-purple-300 mx-auto mb-4" size={40} />
               <p className="font-bold text-xl mb-2">District Champion</p>
               <p className="text-gray-400">Valorant Gaming</p>
             </div>
@@ -521,12 +573,10 @@ const SkillsPage = () => {
 // Contact Page
 const ContactPage = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 pt-16">
-      <div className="max-w-4xl mx-auto text-center">
-        <h1 className="text-5xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-          Let's Connect
-        </h1>
-        <p className="text-xl text-gray-300 mb-12">
+    <div className="min-h-screen flex items-center justify-center px-4 pt-24">
+      <div className="max-w-5xl mx-auto text-center">
+        <SectionTitle title="Let's Connect" />
+        <p className="text-xl text-gray-300 mb-12 -mt-8">
           I'm always open to discussing new opportunities, projects, or collaborations
         </p>
         
@@ -621,7 +671,7 @@ const Portfolio = () => {
       {/* Footer */}
       <footer className="py-8 px-4 border-t border-purple-500/20">
         <div className="max-w-6xl mx-auto text-center text-gray-400">
-          <p>© 2025 S P Chandrakant Prabhu. All rights reserved.</p>
+          <p>(c) 2026 S P Chandrakant Prabhu. All rights reserved.</p>
         </div>
       </footer>
     </div>
